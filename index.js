@@ -2,12 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import librosRoutes from './routes/libros.js'; // Asegúrate de usar la extensión ".js"
-import alimentosRoutes from './routes/alimentos.js';
-import categoriasRoutes from './routes/categorias.js';
-import tiposRoutes from './routes/tipos.js';
-import dietasRoutes from './routes/dietas.js';
-import dietaalimentosRoutes from './routes/dietas_alimentos.js';
+import routes from './routes/index.js'; // Cargar rutas desde el archivo centralizado
 
 dotenv.config();
 
@@ -17,14 +12,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Rutas
-app.use('/api/libros', librosRoutes);
-app.use('/api/alimentos', alimentosRoutes);
-app.use('/api/categorias', categoriasRoutes);
-app.use('/api/tipos', tiposRoutes);
-app.use('/api/dietas', dietasRoutes);
-app.use('/api/dieta_alimentos', dietaalimentosRoutes);
+// Usar rutas
+app.use('/api', routes);
+
 // Inicia el servidor
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
