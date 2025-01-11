@@ -1,4 +1,7 @@
-// middleware/auth.js
+// Este archivo es un middleware que valida la API Key enviada en los encabezados de la solicitud.
+// Comprueba si se ha proporcionado una clave válida en el encabezado `x-api-key`. Si no se proporciona 
+// o si es inválida, responde con un error. Si la API Key es válida, permite que la solicitud continúe.
+
 export default (req, res, next) => {
     const apiKey = req.headers['x-api-key']; // Leer el encabezado `x-api-key`
 

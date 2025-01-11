@@ -1,3 +1,6 @@
+// Este archivo configura y ejecuta el servidor Express, estableciendo los middlewares necesarios,
+// cargando las rutas desde un archivo centralizado y escuchando en el puerto especificado.
+
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';

@@ -12,6 +12,8 @@ var _index = _interopRequireDefault(require("./routes/index.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+// Este archivo configura y ejecuta el servidor Express, estableciendo los middlewares necesarios,
+// cargando las rutas desde un archivo centralizado y escuchando en el puerto especificado.
 // Cargar rutas desde el archivo centralizado
 _dotenv["default"].config();
 

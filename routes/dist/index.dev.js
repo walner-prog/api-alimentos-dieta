@@ -21,6 +21,9 @@ var _dietas_alimentos = _interopRequireDefault(require("./dietas_alimentos.js"))
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+// Este archivo define y registra las rutas principales del sistema, agrupando rutas específicas para 
+// libros, alimentos, categorías, tipos, dietas y la relación entre dietas y alimentos. 
+// Utiliza Express Router para modularizar las rutas y facilitar su gestión.
 var router = _express["default"].Router(); // Registrar rutas
 
 

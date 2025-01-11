@@ -1,3 +1,7 @@
+// Este archivo define y registra las rutas principales del sistema, agrupando rutas específicas para 
+// libros, alimentos, categorías, tipos, dietas y la relación entre dietas y alimentos. 
+// Utiliza Express Router para modularizar las rutas y facilitar su gestión.
+
 import express from 'express';
 import librosRoutes from './libros.js';
 import alimentosRoutes from './alimentos.js';
